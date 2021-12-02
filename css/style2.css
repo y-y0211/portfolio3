@@ -1,0 +1,167 @@
+@charset "utf-8";
+
+/* BIOGRAPHYページ　*/
+html {
+  font-size: 100%;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  height:100%;
+}
+
+body {
+  font-family:'futura-pt','noto-sans-cjk-jp',sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+.nami {
+  width:100%;
+  background-size: cover;
+  max-width: 100%;
+  height: auto;
+
+  animation-name: namiSlideInAnime;
+  animation-duration: 0.6s;
+  animation-fill-mode: forwards;
+}
+
+
+img {
+  max-width: 100%;
+  height:auto;
+}
+
+/* --------------header部分 ---------------*/
+.logo {
+  width: 510px;
+  margin-top: 20px;
+  margin-left:45px;
+}
+
+.main-nav {
+  display: flex;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  margin-top: 34px;
+  margin-right: 55px;
+  list-style: none;
+}
+
+.main-nav li {
+  margin-left:  36px;
+}
+
+.main-nav a {
+  color: #236ee8;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.main-nav a:hover {
+  color:#aed1fc;
+  display: block;
+  transform: translateY(-5px);
+}
+
+h1:hover {
+  display: block;
+  transform: translateY(-4px);
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+
+}
+.logo2 {
+  width: 310px;
+  margin-top: 3px;
+  margin-left:25px;
+}
+
+.guratatie {
+  margin-top: -52%;
+  margin-left: 10%;
+
+  animation-name: SlideInAnime;
+  animation-duration: 0.9s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  animation-delay: 0.4s;
+}
+
+.page-title {
+  position: absolute;
+  top: 14%;
+  right: 19%;
+  font-size: 55px;
+  color: #3b3b3b;
+
+  animation-name: SlideInAnime;
+  animation-duration: 0.9s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  animation-delay: 0.6s;
+}
+
+
+.name {
+  text-align: right;
+  position: absolute;
+  top: 23%;
+  right:19%;
+  font-size: 25px;
+  color: #3b3b3b;
+
+  animation-name: SlideInAnime;
+  animation-duration: 0.9s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  animation-delay: 0.6s;
+
+
+}
+
+.read {
+  position:absolute;
+  top: 33%;
+  right:18%;
+  color: #3b3b3b;
+  line-height: 1.7;
+
+  animation-name: SlideInAnime;
+  animation-duration: 0.9s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  animation-delay: 0.6s;
+}
+
+ /*slideinするアイコンの動き*/
+
+@keyframes SlideInAnime {
+  from {
+    opacity: 0;
+    transform: translateY(120px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes namiSlideInAnime {
+  from {
+    opacity: 1;
+    transform: translateX(-1920px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}

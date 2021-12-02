@@ -1,0 +1,194 @@
+@charset "utf-8";
+body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: #7fb5f1;
+  transition: all 1s;
+  overflow: hidden;
+}
+.bodyfadeout{
+  opacity:0;
+}
+html {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family:'futura-pt','noto-sans-cjk-jp',sans-serif;
+
+
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ------- header部分 ----------　*/
+.logo {
+  width: 510px;
+  margin-top: 20px;
+  margin-left:45px;
+}
+
+.main-nav {
+  display: flex;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  margin-top: 34px;
+  margin-right: 55px;
+  list-style: none;
+}
+
+.main-nav li {
+  margin-left:  36px;
+}
+
+.main-nav a {
+  color: #236ee8;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.main-nav a:hover {
+  color:#aed1fc;
+  display: block;
+  transform: translateY(-5px);
+}
+
+h1:hover {
+  display: block;
+  transform: translateY(-4px);
+}
+
+.page-header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 15%;
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+
+}
+.logo2 {
+  width: 310px;
+  margin-top: 3px;
+  margin-left:25px;
+}
+.contact{
+  position: absolute;
+  top:35%;
+  left:50%;
+}
+
+/*CONTACTフォームのエリア内のスタイル*/
+h2 {
+  color: #3b3b3b;
+  font-size: 90px;
+  margin-top:30%;
+  margin-left: auto;
+
+
+}
+.box{
+    width: 600px;
+    height: 100%;
+    position: absolute;
+    top:-1%;
+    left:12%;
+    font-family:'futura-pt','noto-sans-cjk-jp',sans-serif;
+    color: white;
+
+    animation-name: contactAnime;
+    animation-duration: 1.5s;
+    animation-fill-mode:forwards;
+    opacity: 0;
+
+}
+/*　アニメーション　*/
+@keyframes contactAnime {
+  from {
+    opacity: 0;
+    transform: translateY(120px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.contact{
+  animation-name: contactAnime2;
+  animation-duration: 1.5s;
+  animation-fill-mode:forwards;
+  opacity: 0;
+  animation-delay: 0.3s;
+}
+
+/*　アニメーション　*/
+@keyframes contactAnime2 {
+  from {
+    opacity: 0;
+    transform: translateX(120px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+
+p{
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+/* 名前とメールアドレスと内容入力ボックスのスタイル */
+.box input[type="text"],
+.box input[type="email"],
+.box textarea {
+    background-color: white;
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+    border: 5px solid #637bc2;
+    padding: 14px 10px;
+    width: 400px;
+    outline: none;
+    color: black;
+    border-radius: 23px;
+    transition: 0.25s;
+}
+
+/* 入力ボックスがフォーカスされたときのスタイル（幅が大きくなる＆枠の色が変わる） */
+.box input[type="text"]:hover,
+.box input[type="email"]:hover,
+.box textarea:hover {
+    width: 480px;
+    border-color: #637bc2;
+}
+/* 送信ボタンのスタイル */
+.box input[type="submit"]{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 3px solid #637bc2;
+    padding: 14px 40px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+}
+/* 送信ボタンをマウスオーバーしたときのスタイル */
+.box input[type="submit"]:hover{
+    background: #637bc2;
+ }
